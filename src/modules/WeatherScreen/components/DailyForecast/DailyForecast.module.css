@@ -1,0 +1,74 @@
+.root {
+  border-collapse: collapse;
+
+  width: 100%;
+}
+
+.row {
+  font-size: 2rem;
+
+  display: flex;
+  display: table-row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  height: 55px;
+}
+
+.cell {
+  text-align: center;
+
+  padding: 0;
+}
+
+.row + .row .cell {
+  border-top: var(--panel-divider);
+}
+
+.cellLabel {
+  text-align: left;
+}
+
+.cellConditions {
+  width: 100%;
+}
+
+.cellRange {
+  padding: 0 10px;
+}
+
+.condition {
+  display: inline-flex;
+
+  flex-direction: column;
+  gap: 4px;
+
+  align-items: center;
+}
+
+.conditionIcon {
+  width: auto;
+
+  max-height: 24px;
+}
+
+.conditionPrecipitation {
+  font-size: 1rem;
+  font-weight: 700;
+
+  padding: 1px 4px;
+
+  border-radius: 1rem;
+
+  color: hsl(200, 90%, 50%);
+  background: #fff;
+}
+
+.minTemperature {
+  opacity: 0.5;
+}
+
+.range {
+  width: 90px;
+}

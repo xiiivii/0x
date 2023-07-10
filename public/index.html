@@ -1,1 +1,92 @@
-<div id="root"></div>
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <title>Weather App</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <meta name="title" content="Weather App" />
+      <meta name="description" content="Weather App based on OpenMeteo and BigDataCloud APIs" />
+      <meta name="keywords" content="weather, app, current weather, geolocation" />
+      <meta name="robots" content="index, follow" />
+
+      <meta name="HandheldFriendly" content="true" />
+      <meta name="MobileOptimized" content="width" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <link rel="manifest" href="/site.webmanifest" />
+
+      <meta name="theme-color" content="#000000" data-rh="true" />
+
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+      <style>
+        html,
+        body,
+        #root {
+          width: 100%;
+          height: 100%;
+
+          padding: 0;
+          margin: 0;
+
+          /** Note: Had to set this for PWA on iOS, because elastic overscroll is really nasty */
+          overflow: hidden;
+
+          /** Note: Had to set this for PWA on iOS, because elastic overscroll is really nasty */
+          overscroll-behavior: none;
+        }
+
+        html {
+          font-size: 10px;
+        }
+
+        body {
+          font-size-adjust: none;
+          text-rendering: optimizeLegibility;
+
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+            Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 1.6rem;
+
+          color: #fff;
+          background: #000;
+
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        #root {
+          overflow: auto;
+
+          min-width: 320px;
+        }
+
+        .noscript {
+          text-align: center;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div id="root">
+        <noscript>
+          <p class="noscript">
+            JavaScript is disabled in this browser.<br />
+            Please enable JavaScript or switch to a supported browser to continue.
+          </p>
+        </noscript>
+      </div>
+
+      <script>
+        /** Note: SW is mandatory to have "correct" PWA, so I've just added an empty one */
+        navigator.serviceWorker && navigator.serviceWorker.register('sw.js');
+      </script>
+    </body>
+  </html>
+</html>

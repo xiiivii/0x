@@ -1,0 +1,16 @@
+{
+  "importOrder": [
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^src/types/(.*)$",
+    "^src/modules/(.*)$",
+    "^src/components/(.*)$",
+    "^\\.\\.?\\/((?!css|helpers).)*$",
+    "^\\.\\.?\\/((?!css).)*$",
+    "^(.*)\\.css$"
+  ],
+  "importOrderSeparation": true,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}

@@ -1,0 +1,53 @@
+:root {
+  --skeleton-gradient-color: rgba(255, 255, 255, 0.4);
+  --skeleton-gradient-width: 500px;
+
+  --skeleton-animation-duration: 1200ms;
+}
+
+.root {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+}
+
+.root::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: calc(100% + var(--skeleton-gradient-width));
+  height: 100%;
+
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--skeleton-gradient-color),
+    transparent
+  );
+  background-position: 100%;
+  background-size: var(--skeleton-gradient-width) 100%;
+  background-repeat: no-repeat;
+
+  transform: translateX(-100%);
+
+  animation-name: skeleton-progress;
+  animation-timing-function: ease-in-out;
+  animation-duration: var(--skeleton-animation-duration);
+  animation-iteration-count: infinite;
+}
+
+@keyframes skeleton-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

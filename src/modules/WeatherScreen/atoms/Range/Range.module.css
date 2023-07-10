@@ -1,0 +1,72 @@
+/**
+ * Shows the range of lowest and highest 
+ * temperatures of the specific period
+ */
+.root {
+  --local-height: 4px;
+
+  position: relative;
+
+  height: var(--local-height);
+
+  border-radius: var(--local-height);
+
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/**
+ * Shows the range of lowest and highest 
+ * temperatures of each day in comparison 
+ * to the range of the whole period 
+ */
+.rangeValue {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  overflow: hidden;
+}
+
+.currentValue {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: var(--local-height);
+  height: var(--local-height);
+
+  border-radius: inherit;
+
+  background: #fff;
+
+  box-shadow: 0 0 0 2px #000;
+}
+
+.gradient {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  /**
+   * Note:
+   * Similar to Apple Weather App gradient of temperatures from coldest to hottest.
+   * Ranges are look almost like Apple's, and I am a bit proud of this 
+   * little detail I've decided to implement :D
+   */
+  background: linear-gradient(
+    to right,
+    /* -40°C */ #3b116d 0%,
+    /* -20°C */ #1d6dee 21.05%,
+    /*   0°C */ #5fc8f1 42.11%,
+    /* +10°C */ #69d2cd 52.63%,
+    /* +20°C */ #ebcd1b 63.16%,
+    /* +30°C */ #fd8101 73.68%,
+    /* +55°C */ #6e1005 100%
+  );
+}
