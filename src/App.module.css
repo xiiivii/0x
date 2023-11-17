@@ -1,0 +1,10 @@
+.root {
+  display: grid;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100%;
+
+  background-attachment: fixed;
+}

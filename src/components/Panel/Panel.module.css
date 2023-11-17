@@ -1,0 +1,56 @@
+:root {
+  --panel-divider: 1px solid rgba(255, 255, 255, 0.1);
+  --panel-backdrop-filter: brightness(0.75) saturate(2) opacity(0.5);
+}
+
+.root {
+  border: 1px solid rgba(255, 255, 255, 0.02);
+
+  border-radius: 15px;
+
+  backdrop-filter: var(--panel-backdrop-filter);
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+
+  padding: 15px 15px 0;
+  margin: 0;
+}
+
+.divider {
+  margin: 8px 0 0;
+  border-bottom: var(--panel-divider);
+}
+
+.content {
+  position: relative;
+}
+
+.contentScrollableHorizontally {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  overflow-x: auto;
+}
+
+.contentScrollableHorizontally::-webkit-scrollbar {
+  display: none;
+}
+
+.contentInner {
+  vertical-align: top;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+
+  padding: 0 15px;
+}

@@ -1,0 +1,17 @@
+node_modules
+
+/out/
+.idea/
+.idea_modules/
+.vscode/
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+logs
+*.log
+npm-debug.log*
+build.error.json
+
+build

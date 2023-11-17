@@ -1,0 +1,41 @@
+.list {
+  list-style: none;
+
+  display: flex;
+
+  gap: 25px;
+
+  padding: 18px 0 15px;
+  margin: 0;
+}
+
+.item {
+  text-align: center;
+
+  white-space: nowrap;
+
+  display: flex;
+
+  flex-direction: column;
+  gap: 15px;
+
+  align-items: center;
+}
+
+.label {
+  line-height: 1;
+}
+
+.condition {
+  display: flex;
+
+  align-items: center;
+
+  height: 30px;
+}
+
+.conditionIcon {
+  height: auto;
+
+  max-width: 30px;
+}
